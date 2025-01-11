@@ -1,3 +1,9 @@
+import MainContents from "./mainContents";
+
 export default function Main() {
-  return <div>main</div>;
+  return (
+    <div>
+      <MainContents />
+    </div>
+  );
 }

@@ -151,7 +151,7 @@ function Steps(step: number) {
         )}
         {step === 1 && (
           <p>
-            <span className="text-primary">QR코드드</span>를 통해 나의 증명서도
+            <span className="text-primary">QR코드</span>를 통해 나의 증명서도
             제출하고 <br />
             상대방의 증명서도 검증할 수 있습니다.
           </p>
