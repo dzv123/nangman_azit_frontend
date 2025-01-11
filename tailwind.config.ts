@@ -7,10 +7,13 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      NanumSquare: ["var(--nanumSquare)"],
+      Spoqa: ["var(--font-Spoqa)"],
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#4CAF50",
       },
     },
   },
