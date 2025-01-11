@@ -8,18 +8,33 @@ import Intro2 from "@/public/images/intro2.svg";
 import Intro3 from "@/public/images/intro3.svg";
 import Intro4 from "@/public/images/intro4.svg";
 import { useRouter } from "next/navigation";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 export default function Intro() {
   const [step, setStep] = useState(0);
   const [check, setCheck] = useState<boolean[]>([false, false]);
   const router = useRouter();
 
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       {step <= 2 && (
         <>
-          {Steps(step)}
-          <BottomButton text="시작하기" onClick={() => setStep(step + 1)} />
+          <Slider {...settings}>
+            {Steps(0)}
+            {Steps(1)}
+            {Steps(2)}
+          </Slider>
+
+          <BottomButton text="시작하기" onClick={() => setStep(step + 3)} />
         </>
       )}
       {step === 3 && (
@@ -133,10 +148,16 @@ export default function Intro() {
 function Steps(step: number) {
   return (
     <div className="pt-12 flex flex-col items-center">
-      {step === 0 && <Image src={Intro1} alt="intro" height={200} />}
-      {step === 1 && <Image src={Intro2} alt="intro" height={200} />}
-      {step === 2 && <Image src={Intro3} alt="intro" height={200} />}
-      <div className="font-bold pt-4 text-xl my-4">
+      {step === 0 && (
+        <Image className="mx-auto" src={Intro1} alt="intro" height={200} />
+      )}
+      {step === 1 && (
+        <Image className="mx-auto" src={Intro2} alt="intro" height={200} />
+      )}
+      {step === 2 && (
+        <Image className="mx-auto" src={Intro3} alt="intro" height={200} />
+      )}
+      <div className="font-bold text-center pt-4 text-xl my-4">
         {step === 0 && "완벽한 개인 정보 보호"}
         {step === 1 && "증명서 제출 및 상대방 검증"}
         {step === 2 && "맞춤형 정보 제공"}
