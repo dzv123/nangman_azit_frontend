@@ -93,11 +93,11 @@ function Certificate({
 }) {
   return (
     <div
-      className="w-[20rem] h-[27rem] border mx-auto shadow-lg hover:shadow-xl rounded-2xl"
+      className="w-[20rem] h-[75vh] border mx-auto shadow-lg hover:shadow-xl rounded-2xl"
       onClick={onClick}
     >
       <div
-        className={`p-5 w-full h-[70%] rounded-t-2xl text-white 
+        className={`p-5 w-full h-[75%] rounded-t-2xl text-white 
           flex flex-col justify-between ${
             blue ? `bg-[#1F389A]` : `bg-[#E25870]`
           } `}
