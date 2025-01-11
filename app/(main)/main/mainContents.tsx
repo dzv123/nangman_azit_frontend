@@ -5,7 +5,7 @@ import Logo from "@/public/Logo.svg";
 import { useState } from "react";
 
 export default function MainContents() {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <div>

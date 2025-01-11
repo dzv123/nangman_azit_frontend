@@ -10,8 +10,7 @@ export default function Password() {
 
   useEffect(() => {
     if (password.length === 6) {
-      localStorage.setItem("password", password);
-      router.push("/main");
+      router.push(`/main?password=${password}`);
     }
   });
 

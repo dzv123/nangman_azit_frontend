@@ -48,7 +48,10 @@ export default function Home() {
             />
           </svg>
         </Link>
-        <div className="flex mx-4 justify-between rounded-md text-xl px-5 py-3 bg-gray-100">
+        <Link
+          href={"/auth"}
+          className="flex mx-4 justify-between rounded-md text-xl px-5 py-3 bg-gray-100"
+        >
           <div className="flex gap-3">
             <svg
               width="24"
@@ -94,7 +97,7 @@ export default function Home() {
               fill="#121212"
             />
           </svg>
-        </div>
+        </Link>
       </div>
     </div>
   );
