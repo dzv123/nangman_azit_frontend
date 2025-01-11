@@ -3,8 +3,9 @@
 import Image from "next/image";
 import Logo from "@/public/Logo.svg";
 import { useState } from "react";
+import { User } from "./page";
 
-export default function MainContents() {
+export default function MainContents({ user }: { user: User }) {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -77,20 +78,14 @@ export default function MainContents() {
             <Image src={Logo} alt="Logo" height={30} />
             이어드림
           </div>
-          <Certificate blue={false} onClick={() => setToggle(true)} />
+          <Certificate user={user} onClick={() => setToggle(true)} />
         </>
       )}
     </div>
   );
 }
 
-function Certificate({
-  blue = true,
-  onClick,
-}: {
-  blue: boolean;
-  onClick: () => void;
-}) {
+function Certificate({ user, onClick }: { user: User; onClick: () => void }) {
   return (
     <div
       className="w-[20rem] h-[75vh] border mx-auto shadow-lg hover:shadow-xl rounded-2xl"
@@ -99,12 +94,12 @@ function Certificate({
       <div
         className={`p-5 w-full h-[75%] rounded-t-2xl text-white 
           flex flex-col justify-between ${
-            blue ? `bg-[#1F389A]` : `bg-[#E25870]`
+            user.blue ? `bg-[#1F389A]` : `bg-[#E25870]`
           } `}
       >
-        <span>홍길동님</span>
+        <span>{user.name}님</span>
         <span className="h-[4rem] font-medium">
-          {blue ? (
+          {user.blue ? (
             <>
               <div className="text-2xl pb-1">장애인 증명서</div>
               <span className="font-light">지체장애경증</span>

@@ -1,15 +1,38 @@
+"use server";
+
 import MainContents from "./mainContents";
 
 interface SearchParams {
   password: string;
 }
 
-export default function Main({ searchParams }: { searchParams: SearchParams }) {
+export interface User {
+  name: string;
+  pw: string;
+  blue: boolean;
+}
+
+const user1: User = {
+  name: "홍길동",
+  pw: "123456",
+  blue: true,
+};
+const user2: User = {
+  name: "김영미",
+  pw: "654321",
+  blue: false,
+};
+
+export default async function Main({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
   const pw = searchParams.password;
-  console.log(pw);
+
   return (
     <div>
-      <MainContents />
+      <MainContents user={pw === user1.pw ? user1 : user2} />
     </div>
   );
 }
