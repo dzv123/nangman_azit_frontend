@@ -1,6 +1,12 @@
 interface ButtonProps {
   text: string;
-  [key: string]: any;
+  [key: string]:
+    | string
+    | number
+    | boolean
+    | undefined
+    | React.ReactNode
+    | (() => void);
 }
 
 export function BottomButton({ text, ...anyProps }: ButtonProps) {
