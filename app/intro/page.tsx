@@ -34,7 +34,7 @@ export default function Intro() {
             <label className="flex gap-2 pb-2 items-center border-b">
               <input
                 name="checkall"
-                className="size-5 rounded-sm checked:bg-primary border text-primary focus:ring-transparent"
+                className="size-5 border-slate-400 rounded-sm checked:border-primary checked:bg-primary border text-primary focus:ring-transparent"
                 type="checkbox"
                 checked={check[0] && check[1]}
                 onChange={() => {
@@ -53,7 +53,7 @@ export default function Intro() {
             <label className="flex gap-2 pb-2 pt-2 items-center">
               <input
                 name="check0"
-                className="size-5 rounded-sm checked:bg-primary border text-primary focus:ring-transparent"
+                className="size-5 border-slate-400 rounded-sm checked:border-primary checked:bg-primary border text-primary focus:ring-transparent"
                 type="checkbox"
                 checked={check[0]}
                 onChange={() => {
@@ -68,7 +68,7 @@ export default function Intro() {
             <label className="flex gap-2 pb-2 items-center">
               <input
                 name="check1"
-                className="size-5 rounded-sm checked:bg-primary border text-primary focus:ring-transparent"
+                className="size-5 border-slate-400 rounded-sm checked:border-primary checked:bg-primary border text-primary focus:ring-transparent"
                 type="checkbox"
                 checked={check[1]}
                 onChange={() => {
