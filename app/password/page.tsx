@@ -21,7 +21,7 @@ export default function Password() {
         <div className="text-gray-400">비밀번호 6자리를 입력해주세요</div>
       </div>
 
-      <div className="flex justify-center pb-20 gap-3">
+      <div className="flex justify-center pb-20 gap-8">
         <div
           className={`size-2 rounded-full ${
             password.length > 0 ? `bg-primary` : `bg-gray-200`

@@ -41,12 +41,12 @@ export default function Intro() {
         <>
           <div className="mx-5 pt-5">
             <div className="text-2xl pb-4 font-bold">이용 약관 동의</div>
-            <p className="pb-4">
+            <p className="pb-6">
               서비스 이용을 위해 <br />
               이용 약관 동의가 필요합니다.
             </p>
 
-            <label className="flex gap-2 pb-2 items-center border-b">
+            <label className="flex gap-2 pb-4 items-center border-b">
               <input
                 name="checkall"
                 className="size-5 border-slate-400 rounded-sm checked:border-primary checked:bg-primary border text-primary focus:ring-transparent"
@@ -57,15 +57,10 @@ export default function Intro() {
                   else setCheck([false, false, false]);
                 }}
               />
-              <span className="font-extrabold">
-                전체동의{" "}
-                <span className="text-sm font-normal text-gray-400">
-                  선택항목에 대한 동의 포함
-                </span>
-              </span>
+              <span className="font-extrabold">전체동의</span>
             </label>
 
-            <label className="flex gap-2 pb-2 pt-2 items-center">
+            <label className="flex gap-2 pb-4 pt-4 items-center">
               <input
                 name="check0"
                 className="size-5 border-slate-400 rounded-sm checked:border-primary checked:bg-primary border text-primary focus:ring-transparent"
@@ -80,7 +75,7 @@ export default function Intro() {
                 <span className="text-primary">(필수)</span>
               </span>
             </label>
-            <label className="flex gap-2 pb-2 items-center">
+            <label className="flex gap-2 items-center">
               <input
                 name="check1"
                 className="size-5 border-slate-400 rounded-sm checked:border-primary checked:bg-primary border text-primary focus:ring-transparent"
