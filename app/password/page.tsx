@@ -16,45 +16,45 @@ export default function Password() {
 
   return (
     <div>
-      <div className="py-20 text-center">
+      <div className="pt-20 pb-16 text-center">
         <h2 className="text-2xl font-bold pb-8">비밀번호 설정</h2>
         <div className="text-gray-400">비밀번호 6자리를 입력해주세요</div>
       </div>
 
-      <div className="flex justify-center pb-20 gap-8">
+      <div className="flex justify-center pb-20 gap-10">
         <div
-          className={`size-2 rounded-full ${
+          className={`size-6 rounded-full ${
             password.length > 0 ? `bg-primary` : `bg-gray-200`
           }`}
         ></div>
         <div
-          className={`size-2 rounded-full ${
+          className={`size-6 rounded-full ${
             password.length > 1 ? `bg-primary` : `bg-gray-200`
           }`}
         ></div>
         <div
-          className={`size-2 rounded-full ${
+          className={`size-6 rounded-full ${
             password.length > 2 ? `bg-primary` : `bg-gray-200`
           }`}
         ></div>
         <div
-          className={`size-2 rounded-full ${
+          className={`size-6 rounded-full ${
             password.length > 3 ? `bg-primary` : `bg-gray-200`
           }`}
         ></div>
         <div
-          className={`size-2 rounded-full ${
+          className={`size-6 rounded-full ${
             password.length > 4 ? `bg-primary` : `bg-gray-200`
           }`}
         ></div>
         <div
-          className={`size-2 rounded-full ${
+          className={`size-6 rounded-full ${
             password.length > 5 ? `bg-primary` : `bg-gray-200`
           }`}
         ></div>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 fixed bottom-16 max-w-screen-sm mx-auto w-full">
+      <div className="grid grid-cols-3 gap-12 text-xl fixed bottom-16 max-w-screen-sm mx-auto w-full">
         {Array.from({ length: 9 }, (_, i) => i + 1).map((i) => (
           <PasswordButton
             key={i}
