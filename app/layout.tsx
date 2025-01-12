@@ -66,7 +66,7 @@ const nanumSquare = localFont({
 
 export const metadata: Metadata = {
   title: "이어드림",
-  description: "블록체인 기반 증명서 발급 서비스",
+  description: "블록체인 기반 복지대상자 증명서 발급 서비스",
 };
 
 export default function RootLayout({

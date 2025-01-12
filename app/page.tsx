@@ -7,7 +7,7 @@ export default function Home() {
     <div className="">
       <div className="font-NanumSquare flex flex-col items-center text-lg pt-32">
         <div>블록체인 기반</div>
-        <div>증명서 발급 서비스</div>
+        <div>복지대상자 증명서 발급 서비스</div>
         <div className="font-extrabold flex items-center text-4xl gap-2 pt-2">
           <Image src={Logo} alt="Logo" height={50} />
           이어드림
